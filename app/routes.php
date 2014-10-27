@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'HomeController@showWelcome');
+
+// Route::get('/', function()
+// {
+// 	$generator = new Badcow\LoremIpsum\Generator();
+//     $data = $generator->getParagraphs(1);
+// 	$name = "Vineet";
+// 	return View::make('hello')->with('name', $data);
+// 	//Route::get('/', 'HomeController@showWelcome');
+// });
