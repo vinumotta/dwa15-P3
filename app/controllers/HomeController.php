@@ -20,12 +20,22 @@ class HomeController extends BaseController {
 		$generator = new Badcow\LoremIpsum\Generator();
     	$data = $generator->getParagraphs(1);
     	$faker = Faker\Factory::create();
-    	//$name = 'Vineet';
-    	//echo implode('<p>', $paragraphs);
-    	$array = ['name' => $data, 'faker' => $faker];
+    	$array = ['returned_paragraphs' => $data, 'returned_users' => $faker];
 
 		return View::make('hello')->with('array',$array);
-		//->with('paragraphs', $paragraphs);
 	}
 
+	public function showParagraphs()
+	{
+		$data = $generator->getParagraphs(1);
+		return View::make('hello')->with('returned_paragraphs',$data);
+	}
+
+	public function showUsers()
+	{
+		$faker = Faker\Factory::create();
+		$returned_users = ['name' => $faker->name, 'address' => $faker->address, 'text'->$faker->text];
+
+		return View::make('hello')->with('returned_users',$returned_users);
+	}
 }
