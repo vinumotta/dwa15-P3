@@ -50,11 +50,11 @@
 			$returned_users = $array['returned_users'];
 		}
 		
-		for ($i = 0; $i <count($returned_users); $i++)
+		for ($i = 0; $i <4; $i++)
 		{
-		echo $returned_users['name'] . '</br>';
-		echo $returned_users['address'] . '</br>';
-		echo $returned_users['text'] . '</br>';
+		echo $faker->name . '</br>';
+		echo $faker->address . '</br>';
+		echo $faker->text . '</br>';
 		}
 		?>
 
