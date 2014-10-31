@@ -50,6 +50,12 @@
 			$returned_users = $array['returned_users'];
 		}
 		
+		echo Form::open(array('url' => '/paragraphs', 'method' => 'get'));
+		echo Form::text('paragraphs', '3');
+		echo Form::submit('Submit!');
+		echo Form::close;
+
+
 		for ($i = 0; $i <4; $i++)
 		{
 		echo $returned_users->name . '</br>';
@@ -58,6 +64,7 @@
 		}
 		?>
 
+		<!--
 		<form method='get' name='paragraph_form' action='/paragraphs'>
 	    Enter Paragraph Parameters<br>
 	    <input type='text' name='paragraphs'>Number of paragraphs<br>
@@ -69,6 +76,7 @@
 		<input type='text' name="number_users" value="number_users">Number of random users<br>
 		<input type='submit' value='Generate users!' name='users_submit'><br>
 		</form>
+		-->
 
 		</p1>
 
