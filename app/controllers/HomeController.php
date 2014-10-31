@@ -34,7 +34,7 @@ class HomeController extends BaseController {
 	public function showUsers()
 	{
 		$faker = Faker\Factory::create();
-		$returned_users = ['name' => $faker->name, 'address' => $faker->address, 'text'->$faker->text];
+		$returned_users = ['name' => $faker->name, 'address' => $faker->address, 'text' => $faker->text];
 
 		return View::make('hello')->with('returned_users',$returned_users);
 	}
