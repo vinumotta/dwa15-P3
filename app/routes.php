@@ -13,6 +13,15 @@
 
 Route::get('/', 'HomeController@showWelcome');
 
+//Route::pattern('id', '[0-9]+');
+
+//Route::get('user/{id}', function($id)
+
+
+Route::get('/paragraphs', 'HomeController@showParagraphs');
+
+Route::get('/users', 'HomeController@showUsers');
+
 // Route::get('/', function()
 // {
 // 	$generator = new Badcow\LoremIpsum\Generator();
