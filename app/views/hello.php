@@ -50,9 +50,7 @@
 			$returned_users = $array['returned_users'];
 		}
 		
-
-
-		for ($i = 0; $i <5 ; $i++)
+		for ($i = 0; $i <$returned_users.count() ; $i++)
 		{
 		echo $returned_users['name'] . '</br>';
 		echo $returned_users['address'] . '</br>';
