@@ -52,9 +52,9 @@
 		
 		for ($i = 0; $i <4; $i++)
 		{
-		echo $faker->name . '</br>';
-		echo $faker->address . '</br>';
-		echo $faker->text . '</br>';
+		echo $returned_users->name . '</br>';
+		echo $returned_users->address . '</br>';
+		echo $returned_users->text . '</br>';
 		}
 		?>
 
