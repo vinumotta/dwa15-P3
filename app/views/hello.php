@@ -53,7 +53,7 @@
 		echo Form::open(array('url' => '/paragraphs', 'method' => 'get'));
 		echo Form::text('paragraphs', '3');
 		echo Form::submit('Submit!');
-		echo Form::close;
+		echo Form::close();
 
 
 		for ($i = 0; $i <4; $i++)
