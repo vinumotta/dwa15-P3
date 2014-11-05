@@ -17,8 +17,9 @@ Route::get('/', 'HomeController@showWelcome');
 
 //Route::get('user/{id}', function($id)
 
+Route::pattern('number', '[0-9]+');
 
-Route::get('/paragraphs', 'HomeController@showParagraphs');
+Route::get('/paragraphs/{number}', 'HomeController@showParagraphs($number)');
 
 Route::get('/users', 'HomeController@showUsers');
 

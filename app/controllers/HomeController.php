@@ -18,24 +18,27 @@ class HomeController extends BaseController {
 	public function showWelcome()
 	{
 		$generator = new Badcow\LoremIpsum\Generator();
-    	$data = $generator->getParagraphs(1);
+		$data = $generator->getParagraphs(5);
     	$faker = Faker\Factory::create();
     	$array = ['returned_paragraphs' => $data, 'returned_users' => $faker];
 
 		return View::make('hello')->with('array',$array);
 	}
 
-	public function showParagraphs()
+	public function showParagraphs($num_paragraphs)
 	{
-		$data = $generator->getParagraphs(1);
-		return View::make('hello')->with('returned_paragraphs',$data);
+		$generator = new Badcow\LoremIpsum\Generator();
+		$data = $generator->getParagraphs(5);
+		$array = ['returned_paragraphs' => $data, 'returned_users' => null];
+		return View::make('hello')->with('array',$array);
 	}
 
 	public function showUsers()
 	{
 		$faker = Faker\Factory::create();
-		$returned_users = ['name' => $faker->name, 'address' => $faker->address, 'text' => $faker->text];
+		$array = ['returned_users' => $faker, 'returned_paragraphs' => null];
+		//$returned_users = ['name' => $faker->name, 'address' => $faker->address, 'text' => $faker->text];
 
-		return View::make('hello')->with('returned_users',$returned_users);
+		return View::make('hello')->with('array',$array);
 	}
 }
